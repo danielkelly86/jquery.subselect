@@ -1,6 +1,10 @@
 # jquery.subselect
 jquery add on for sub select lists
 
+Dependancies
+
+1. jquery-1.11.3.js (untested in other versions)
+
 To use sub select, your sub select list will need the following markup
 
 &lt;div class="form-group"&gt;<br />
