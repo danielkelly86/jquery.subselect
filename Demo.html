@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Demo Sub Forms</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/jquery.subselect.style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-md-12">Demo </h1>
+            <form id="demo-form" class="col-md-6" novalidate="novalidate">
+                <fieldset>
+                    <legend>How the sub category can work</legend>
+
+                    <div class="form-group">
+                        <label for="ID1">Category</label>
+                        <select class="form-control" id="ID1" name="ID1">
+                            <option selected="selected" value="">Please select..</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group" data-related-sub-select="ID2">
+                        <label for="ID2" data-related-sub-select="ID2">Sub Category</label>
+                        <select class="form-control" id="ID2" name="ID2" data-parent-id="ID1">
+                            <option selected="selected" value="">Please select..</option>
+                            <option data-parent-value="1" value="1">Option 1_1</option>
+                            <option data-parent-value="1" value="2">Option 1_2</option>
+                            <option data-parent-value="2" value="3">Option 2_1</option>
+                            <option data-parent-value="2" value="4">Option 2_2</option>
+                            <option data-parent-value="3" value="5">Option 3_1</option>
+                            <option data-parent-value="3" value="6">Option 3_2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ID3">Category</label>
+                        <select class="form-control" id="ID3" name="ID3" required="required" aria-required="true">
+                            <option selected="selected" value="">Please select..</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group" data-related-sub-select="ID4">
+                        <label for="ID4" data-related-sub-select="ID4">Sub Category</label>
+                        <select class="form-control" id="ID4" name="ID4" required="required" aria-required="true" data-parent-id="ID3">
+                            <option selected="selected" value="">Please select..</option>
+                            <option data-parent-value="1" value="1">Option 1_1</option>
+                            <option data-parent-value="1" value="2">Option 1_2</option>
+                            <option data-parent-value="2" value="3">Option 2_1</option>
+                            <option data-parent-value="2" value="4">Option 2_2</option>
+                            <option data-parent-value="3" value="5">Option 3_1</option>
+                            <option data-parent-value="3" value="6">Option 3_2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="DUP">Independant Select List For Testing</label>
+                        <select class="form-control" id="DUP" name="DUP" required="required" aria-required="true">
+                            <option selected="selected" value="">Please select..</option>
+                            <option value="1">I Like Trains</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <input type="submit" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.subselect.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //form validation
+            $("#demo-form").validate();
+
+            //sub select source and initial load
+            $('select[data-parent-id]').initSubSelectSource();
+            $('select').onSelectChange();
+
+            //On change event
+            $('select').change(function () {
+                $('select').onSelectChange();
+            });
+        });
+    </script>
+</body>
+</html>

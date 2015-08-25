@@ -1,0 +1,17 @@
+body {
+    font-family: calibri;
+}
+
+select.error, input.error, textarea.error {
+    color: red;
+    background-color: pink;
+    border: solid 1px red;
+}
+
+div, label {
+    padding: 10px;
+}
+
+.no-sub-select-options {
+    border: dotted 1px orange;
+}
