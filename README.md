@@ -4,26 +4,26 @@ jquery add on for sub select lists
 To use sub select, your sub select list will need the following markup
 
 &lt;div class="form-group"&gt;<br />
-  &lt;label for="ID1"&gt;Category&lt;/label&gt;<br />
-  &lt;select class="form-control" id="ID1" name="ID1"&gt;<br />
-    &lt;option selected="selected" value=""&gt;Please select..&lt;/option&gt;<br />
-    &lt;option value="1"&gt;Option 1&lt;/option&gt;<br />
-    &lt;option value="2"&gt;Option 2&lt;/option&gt;<br />
-    &lt;option value="3"&gt;Option 3&lt;/option&gt;<br />
-    &lt;option value="4"&gt;Option 4&lt;/option&gt;<br />
-  &lt;/select&gt;<br />
+&nbsp;&lt;label for="ID1"&gt;Category&lt;/label&gt;<br />
+&nbsp;&lt;select class="form-control" id="ID1" name="ID1"&gt;<br />
+&nbsp;&nbsp;&lt;option selected="selected" value=""&gt;Please select..&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option value="1"&gt;Option 1&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option value="2"&gt;Option 2&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option value="3"&gt;Option 3&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option value="4"&gt;Option 4&lt;/option&gt;<br />
+&nbsp;&lt;/select&gt;<br />
 &lt;/div&gt;<br />
 &lt;div class="form-group" data-related-sub-select="ID2"&gt;<br />
-  &lt;label for="ID2" data-related-sub-select="ID2"&gt;Sub Category&lt;/label&gt;<br />
-  &lt;select class="form-control" id="ID2" name="ID2" data-parent-id="ID1"&gt;<br />
-    &lt;option selected="selected" value=""&gt;Please select..&lt;/option&gt;<br />
-    &lt;option data-parent-value="1" value="1"&gt;Option 1_1&lt;/option&gt;<br />
-    &lt;option data-parent-value="1" value="2"&gt;Option 1_2&lt;/option&gt;<br />
-    &lt;option data-parent-value="2" value="3"&gt;Option 2_1&lt;/option&gt;<br />
-    &lt;option data-parent-value="2" value="4"&gt;Option 2_2&lt;/option&gt;<br />
-    &lt;option data-parent-value="3" value="5"&gt;Option 3_1&lt;/option&gt;<br />
-    &lt;option data-parent-value="3" value="6"&gt;Option 3_2&lt;/option&gt;<br />
-  &lt;/select&gt;<br />
+&nbsp;&lt;label for="ID2" data-related-sub-select="ID2"&gt;Sub Category&lt;/label&gt;<br />
+&nbsp;&lt;select class="form-control" id="ID2" name="ID2" data-parent-id="ID1"&gt;<br />
+&nbsp;&nbsp;&lt;option selected="selected" value=""&gt;Please select..&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option data-parent-value="1" value="1"&gt;Option 1_1&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option data-parent-value="1" value="2"&gt;Option 1_2&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option data-parent-value="2" value="3"&gt;Option 2_1&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option data-parent-value="2" value="4"&gt;Option 2_2&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option data-parent-value="3" value="5"&gt;Option 3_1&lt;/option&gt;<br />
+&nbsp;&nbsp;&lt;option data-parent-value="3" value="6"&gt;Option 3_2&lt;/option&gt;<br />
+&nbsp;&lt;/select&gt;<br />
 &lt;/div&gt;<br />
 
 Parameters
